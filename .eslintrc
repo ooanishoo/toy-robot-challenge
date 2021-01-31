@@ -4,6 +4,8 @@
   "plugins": [
     "@typescript-eslint"
   ],
+  "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" },
+
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
