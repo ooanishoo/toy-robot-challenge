@@ -1,5 +1,5 @@
 import { Direction } from '../direction/direction';
-import { Position } from '../robot/position';
+import { Position } from '../types/position';
 import fs from 'fs';
 
 export const readCommand = (filePath: string): Promise<string[]> =>

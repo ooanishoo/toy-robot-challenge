@@ -103,7 +103,7 @@ describe('Robot tests', () => {
       expectedY: number,
     };
 
-    describe('When robot is placed anywhere but the table edge', () => {
+    describe('When robot is placed anywhere but the table edges', () => {
       test.each`
         x    |  y   | direction  | expectedX    |  expectedY   
         ${3} | ${3} | ${'EAST'}  | ${4}         | ${3} 

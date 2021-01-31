@@ -2,7 +2,7 @@ import path from 'path';
 import { Table } from './table/table';
 import { Robot } from './robot/robot';
 import { parseCommand } from './command/command';
-import { readCommand } from './utils/readCommand';
+import { readCommand } from './utils/utils';
 
 export const startSimulation = async (): Promise<void> => {
 
