@@ -1,6 +1,7 @@
 import { Direction } from '../direction/direction';
 import { Command } from '../command/command';
 import { Table } from '../table/table';
+import * as display from '../utils/display'
 import { processNextMove } from '../utils/processNextMove';
 import { turnLeft, turnRight } from '../rotation/rotation';
 
@@ -65,6 +66,12 @@ export class Robot {
     this._direction = turnRight(this._direction);
   }
 
+  public report = (): void => {
+    if (!this._isPlaced) {
+      return;
+    }
+    display.info(`Output: ${this._x},${this._y},${this._direction}`);
+  }
 
   public run(command: Command): void {
     switch (command.type) {
@@ -85,5 +92,4 @@ export class Robot {
         break;
     }
   }
-
 }
