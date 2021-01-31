@@ -1,8 +1,8 @@
 import { Direction } from '../direction/direction';
 import { Command } from '../command/command';
 import { Table } from '../table/table';
-import * as display from '../utils/display'
-import { processNextMove } from '../utils/processNextMove';
+import * as display from '../types/display'
+import { processNextMove } from '../utils/utils';
 import { turnLeft, turnRight } from '../rotation/rotation';
 
 export class Robot {
@@ -70,7 +70,7 @@ export class Robot {
     if (!this._isPlaced) {
       return;
     }
-    display.info(`Output: ${this._x},${this._y},${this._direction}`);
+    display.log(`Output: ${this._x},${this._y},${this._direction}`);
   }
 
   public run(command: Command): void {
