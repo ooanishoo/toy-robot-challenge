@@ -15,4 +15,7 @@ export class Table {
     return this._height;
   }
 
+  public isWithinRange(x: number, y: number): boolean {
+    return x >= 0 && x < this._width && y >= 0 && y < this._height;
+  }
 }
