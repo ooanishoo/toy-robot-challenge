@@ -39,15 +39,15 @@ describe(`Table Test`, () => {
       });
 
       test.each`
-        x      | y 
-        ${0}   | ${-1}
-        ${-1}  | ${0}
-        ${2}   | ${-1}
-        ${3}   | ${0}
-        ${2}   | ${3}
-        ${3}   | ${2}
-        ${-1}  | ${2}
-        ${0}   | ${3}
+        x              | y 
+        ${0}           | ${0 - 1}
+        ${0 - 1}       | ${0}
+        ${width}       | ${-1}
+        ${width}       | ${0}
+        ${width - 1}   | ${height}
+        ${width}       | ${height - 1}
+        ${0 - 1}       | ${height - 1}
+        ${0}           | ${height}
       `(`(x=$x, y=$y) should NOT be within the boundary of the table`, ({ x, y }) => {
         const result = table.isWithinRange(x, y);
         expect(result).toBe(false);
@@ -55,14 +55,3 @@ describe(`Table Test`, () => {
     });
   })
 });
-
-/*
-  ${0}   | ${-1}
-${-1}  | ${0}
-${2}   | ${-1}
-${3}   | ${0}
-${2}   | ${3}
-${3}   | ${2}
-${-1}  | ${2}
-${0}   | ${3}
-*/
