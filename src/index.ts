@@ -16,11 +16,11 @@ export const startSimulation = async (): Promise<void> => {
       const filePath = path.resolve(fileName);
 
       try {
+        // read commands from the file
         const commands = await readCommand(filePath);
-        //console.log({ commands });
 
+        // validate the commands
         const validCommands = commands.map(parseCommand);
-        //console.log({ validCommands });
 
         // create a table of dimenstion 5 x 5 units
         const table = new Table(5, 5);
@@ -40,7 +40,7 @@ export const startSimulation = async (): Promise<void> => {
     }
 
   } catch (error) {
-    display.error('Oops! Something went wrong.', error && error.message);
+    display.error('Oops! Something went wrong.', error);
     display.log(getInstruction())
   }
 }

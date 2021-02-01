@@ -1,4 +1,4 @@
-import { Robot } from '../robot/robot';
+import { Robot } from './robot';
 import { Table } from '../table/table';
 import { Direction } from '../direction/direction';
 import * as display from '../types/display';
