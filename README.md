@@ -108,7 +108,7 @@ This is the directory/file structure once you clone the repository from the git.
 
   *Note: You can also create your own command file*
 
-- Run `npm build` to compile Typescript files to Javascript files to dist/ with tsc
+- Run `npm run build` to compile Typescript files to Javascript files to dist/ with tsc
   
 
 
