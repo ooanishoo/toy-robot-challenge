@@ -57,7 +57,7 @@ This is the directory/file structure once you clone the repository from the git.
 │   │   └── direction.ts
 │   ├── index.ts
 │   ├── robot
-│   │   ├── robot.test.ts
+│   │   ├── robot.spec.ts
 │   │   └── robot.ts
 │   ├── rotation
 │   │   ├── rotation.spec.ts
@@ -66,11 +66,13 @@ This is the directory/file structure once you clone the repository from the git.
 │   │   ├── table.spec.ts
 │   │   └── table.ts
 │   ├── tests
-│   │   └── data
-│   │       ├── simulation-1
-│   │       ├── simulation-2
-│   │       ├── simulation-3
-│   │       └── simulation-4
+│   │   ├── data
+│   │   │   ├── simulation-1
+│   │   │   ├── simulation-2
+│   │   │   ├── simulation-3
+│   │   │   └── simulation-4
+│   │   ├── integration.spec.ts
+│   │   └── testCases.ts
 │   ├── types
 │   │   ├── display.ts
 │   │   └── position.ts
