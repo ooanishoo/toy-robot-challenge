@@ -20,7 +20,7 @@ describe('parseCommand', () => {
   });
 
   describe('When a command is Invalid', () => {
-    const input = ['PLACE', 'PLACE 0', 'PLACE 0,0', 'PLACE 0,0,1', 'PLACE NORTH,0,1', 'PLACE ,,', 'MOVING', 'FORWARD', 'BACKWARD', null];
+    const input = ['PLACE', 'PLACE 0', 'PLACE 0,0', 'PLACE 0,0,1', 'PLACE NORTH,0,1', 'PLACE ,,', 'MOVING', 'FORWARD', 'BACKWARD'];
     test.each(input)(`should throw error when command = %p`, (command) => {
       expect(() => parseCommand(command)).toThrowError();
     });

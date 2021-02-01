@@ -16,7 +16,7 @@ describe('Robot tests', () => {
   });
 
   describe('REPORT Action tests', () => {
-    test.only('should log the position and direction of the robot', () => {
+    test('should log the position and direction of the robot', () => {
       robot.place(0, 1, 'WEST');
       robot.report();
       const expected = 'Output: 0,1,WEST';
@@ -172,9 +172,6 @@ describe('Robot tests', () => {
       expect(robot.x).toBeUndefined();
       expect(robot.y).toBeUndefined();
       expect(robot.direction).toBeUndefined();
-      expect(display.log).not.toHaveBeenCalled();
     });
   });
-
-
 });
