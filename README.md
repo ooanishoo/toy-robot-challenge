@@ -87,7 +87,7 @@ This is the directory/file structure once you clone the repository from the git.
 - Run `npm install` to install package dependencies.
 - Run `npm test` to run tests
 
-### Run Simulation
+### Run Robot Simulation
 - Run `npm install` to install package dependencies.
 - Run `npm run simulation` to start robot simulation. This will run examples:
   - **simulation-1**
@@ -108,5 +108,34 @@ This is the directory/file structure once you clone the repository from the git.
 
 - Run `npm build` to compile Typescript files to Javascript files to dist/ with tsc
   
+
+
+## Code Architecture
+
+### Table
+ A table can be constructed by providing dimensions: width and height
+ ```
+ const table = new Table(5,5);
+```
+
+### Command
+
+- Type **CommandType** represents the types: **PLACE**, **MOVE**, **LEFT**, **RIGHT**, **REPORT**
+
+- Type **Command** represents the type, positions (x,y) and direction.
+
+  ```
+  type Command = {
+    type: CommandType
+    x?: number
+    y?: number
+    direction?: Direction
+  }
+  ```
+
+### Direction
+**Direction** represents the types: **NORTH**, **SOUTH**, **WEST**, **EAST**.
+
+
 
 

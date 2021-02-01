@@ -17,7 +17,7 @@ export type Command = {
 
 export const parseCommand = (command: string): Command => {
 
-  const args = command.trim().split(/ |,/); // modify
+  const args = command.trim().split(/ |,/);
 
   switch (args[0].toUpperCase()) {
     case 'PLACE':
@@ -27,12 +27,12 @@ export const parseCommand = (command: string): Command => {
         y: parseInt(args[2], 10),
         direction: parseDirection(args[3] || ''),
       };
-    case 'MOVE':
-      return { type: 'MOVE' };
     case 'LEFT':
       return { type: 'LEFT' };
     case 'RIGHT':
       return { type: 'RIGHT' };
+    case 'MOVE':
+      return { type: 'MOVE' };
     case 'REPORT':
       return { type: 'REPORT' };
     default:
