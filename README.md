@@ -23,7 +23,7 @@ REPORT
 -	MOVE will move the toy robot 1 unit forward in the direction it is currently facing
 -	LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot
 -	REPORT will announce the X,Y and F of the robot. This can be in any form, but standard output is sufficient
--	Input is only standard input as MVP, will include reading text file in future releases.
+-	Input is read from text file.
 
 
 # Getting started
