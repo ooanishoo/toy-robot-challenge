@@ -1,48 +1,62 @@
 # Toy Robot Code Challenge
+
+1.  [Introduction](#introduction)
+2.  [Application Instructions](#application-instructions)
+3.  [Getting Started](#getting-started)
+    *   [Prerequisites](#prerequisites)
+    *   [Installation](#installation)
+4.  [Running Tests](#running-tests)
+5.  [Running Robot Simulation](#running-robot-simulation)
+6.  [Code Architecture](#code-architecture)
+    *   [Table](#table)
+    *   [Command](#command)
+    *   [Direction](#direction)
+
+## Introduction
 A toy robot simulator written in Typescript
 
 - The application is a simulation of a toy robot moving on a square table top, of dimensions 5 units x 5 units. 
 - There are no other obstructions on the table surface. 
-- The robot is free to roam around the surface of the table, but must be prevented from falling to destruction.  
+- The robot is free to roam around the surface of the table but must be prevented from falling to destruction.  
 - Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.
 
 ## Application Instructions
 
-A robot can read in commands of the following form from a text file
-```shell
+A robot can read commands of the following form from a text file
+```
 PLACE X,Y,FACE
 MOVE
 LEFT
 RIGHT
 REPORT
 ```
--	PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST
--	The origin (0,0) is considered to be the SOUTH WEST most corner on the table
+-	PLACE will put the toy robot on the table in positions X,Y and facing NORTH, SOUTH, EAST, or WEST
+-	The origin (0,0) is considered to be the SOUTH WEST most corner of the table
 -	The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command
 -	The application will discard all commands in the sequence until a valid PLACE command has been executed
 -	MOVE will move the toy robot 1 unit forward in the direction it is currently facing
 -	LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot
--	REPORT will announce the X,Y and F of the robot. This can be in any form, but standard output is sufficient
--	Input is read from text file.
+-	REPORT will announce the X, Y, and F of the robot. This can be in any form, but the standard output is sufficient
+-	Input is read from a text file.
 
 
-# Getting started
+## Getting started
 ### Prerequisites
 
 - [node](https://nodejs.org/en/), Run ` node --version` in terminal to verify
 - npm comes with node
  
 
-## Installation
+### Installation
 
 Clone the repository
-```shell
+```
 $ git clone https://github.com/ooanishoo/toy-robot-challenge
 $ cd toy-robot-challenge
 ```
 
 This is the directory/file structure once you clone the repository from the git.
-```shell
+```
 ├── README.md
 ├── jest.config.js
 ├── package-lock.json
@@ -84,20 +98,20 @@ This is the directory/file structure once you clone the repository from the git.
 └── tsconfig.json
 ```
 
-### Run JEST Tests
+## Running Tests
 
 - Run `npm install` to install package dependencies.
 - Run `npm test` to run tests
 
-### Run Robot Simulation
+## Running Robot Simulation
 - Run `npm install` to install package dependencies.
-- Run `npm run simulation` to start robot simulation. This will run examples:
+- Run `npm run simulation` to start the robot simulation. This will run examples:
   - **simulation-1**
   - **simulation-2**
   - **simulation-3**
   - **simulation-4**
 
-  *Note: simulation-1, simulation-2, simulation-3, simulation-4 are test command files in `src/tests/data` folder. You can modify the commands inside these files to test different outcomes.*
+  *Note: simulation-1, simulation-2, simulation-3, and simulation-4 are test command files in the `src/tests/data` folder. You can modify the commands inside these files to test different outcomes.*
 
 - Run `npm start` *./any-command-file*.
   
