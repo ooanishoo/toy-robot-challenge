@@ -1,5 +1,7 @@
 # Toy Robot Code Challenge
 
+![toy-robot](https://github.com/ooanishoo/toy-robot-challenge/assets/9260574/f8995df6-19f6-4008-9ed5-8ca8af017b40)
+
 1.  [Introduction](#introduction)
 2.  [Application Instructions](#application-instructions)
 3.  [Getting Started](#getting-started)
@@ -14,7 +16,6 @@
 
 ## Introduction
 A toy robot simulator written in Typescript
-
 - The application is a simulation of a toy robot moving on a square table top, of dimensions 5 units x 5 units. 
 - There are no other obstructions on the table surface. 
 - The robot is free to roam around the surface of the table but must be prevented from falling to destruction.  
